@@ -3,7 +3,6 @@ from ultralytics import YOLO
 import tempfile
 import os
 import cv2
-import time
 
 # Load YOLO model
 @st.cache_resource
@@ -72,7 +71,7 @@ if uploaded_file is not None:
 
                     out.write(annotated_frame)
                     video_placeholder.image(
-                        annotated_frame, channels="BGR", caption="Detection in Progress", use_column_width=True
+                        annotated_frame, channels="BGR", caption="Detection in Progress", use_container_width=True
                     )
 
                 frame_idx += 1
