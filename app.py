@@ -95,5 +95,6 @@ if uploaded_file is not None:
         except Exception as e:
             st.error(f"An error occurred: {e}")
         finally:
+            # Clean up temporary files
             if os.path.exists(temp_path):
                 os.remove(temp_path)
